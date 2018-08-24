@@ -1,12 +1,12 @@
 # Caching the Inverse of a Matrix:
-makeCacheMatrix <- function(x = matris()){
-	inverse <- NULL
-	set <- function(y){
-	x <<- y
-	inverse <<-NULL
-	}
-	get <- function()x
-	setinverse <- function(inv) inverse <<- inv
-	getinverse <- function()inverse
-	list(set = set, setinverse = setinverse, getinverse = getinverse)
+makeCacheMatrix <- function(x = matrix()){
+  inv <- NULL
+  set <- function(y){
+    x <<- y
+    inv <<- NULL
+  }
+  get <- function() x
+  setinverse <- function(inverse) inv <<- inverse
+  getinverse <- function()inv
+  list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
