@@ -1,4 +1,6 @@
-# Caching the Inverse of a Matrix:
+## Caching the Inverse of a Matrix:
+## The bellow function creates a special "matrix" object that can cache its inverse.
+
 makeCacheMatrix <- function(x = matrix()){
   inv <- NULL
   set <- function(y){
@@ -15,6 +17,7 @@ makeCacheMatrix <- function(x = matrix()){
 cacheSolve <- function(x, ...)
 {
   ## Return a matrix that is the inverse of 'x'
+  ## If the inverse has been already calculated then it should be retrive from the cache 
   
   inv <- x$getinverse()
   if (!is.null(inv))
